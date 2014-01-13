@@ -6,7 +6,7 @@ A simple Twitter Bootstrap style tag cloud generator. Initial version was writte
 Example
 -------
 
-<b>Add tags to a unordered list</b>
+![] (https://dl.dropboxusercontent.com/u/15923556/img/bootstrap-tag-cloud.jpg)
 
 
 <p>Add and remove tags. Add an <code>id</code> of <code>id="tag"</code>, <code>id="tag-info"</code>, <code>id="tag-success"</code>, <code>id="tag-warning"</code>, <code>id="tag-danger"</code>, or <code>id="tag-inverse"</code> to the surrounding <code>&lt;div&gt;</code> of the <code>&lt;input&gt;</code> and <code>&lt;button&gt;</code> for bootstrap tag cloud styles.</p>
