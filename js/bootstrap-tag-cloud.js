@@ -23,24 +23,27 @@
  *THE SOFTWARE.
  * ========================================================= */
 
+/*jslint browser:true */
+/*global $, jQuery, alert, addTagBindings, addTag */
+
 // Add listener for tag removals
-$(document).on('click','.tag-cloud', function removeTag(){ $(this).remove(); });
+$(document).on('click', '.tag-cloud', function removeTag() { $(this).remove(); });
 
 
 // Find out which containers we have on this document and setup proper bindings
-$(document).ready(function() {
+$(document).ready(function () {
 
-	if ( $("#tag").length > 0 ) { addTagBindings('#tag'); }
+	if ($("#tag").length > 0) { addTagBindings('#tag'); }
 
-	if ( $("#tag-info").length > 0 ) { addTagBindings('#tag-info');	}
+	if ($("#tag-info").length > 0) { addTagBindings('#tag-info');	}
 
-	if ( $("#tag-success").length > 0 ) { addTagBindings('#tag-success'); }
+	if ($("#tag-success").length > 0) { addTagBindings('#tag-success'); }
 
-	if ( $("#tag-warning").length > 0 ) { addTagBindings('#tag-warning'); }
+	if ($("#tag-warning").length > 0) { addTagBindings('#tag-warning'); }
 
-	if ( $("#tag-danger").length > 0 ) { addTagBindings('#tag-danger');	}
+	if ($("#tag-danger").length > 0) { addTagBindings('#tag-danger');	}
 	
-	if ( $("#tag-inverse").length > 0 ) { addTagBindings('#tag-inverse');	}				
+	if ($("#tag-inverse").length > 0) { addTagBindings('#tag-inverse');	}
 
 });
 
@@ -49,9 +52,9 @@ $(document).ready(function() {
 // detected on the page that includes this .js module
 function addTagBindings(id) {
 
-		$(id + ' > button').click(function(){ addTag(id); });
+		$(id + ' > button').click(function () { addTag(id); });
 
-		$(id + ' > input').keyup(function (e) {  if (e.keyCode == 13) { addTag(id); }  });	
+		$(id + ' > input').keyup(function (e) { if (e.keyCode == 13) { addTag(id); }  });	
 
 }
 
@@ -63,6 +66,9 @@ function addTag(id) {
 	var Tag = $(id + ' > input').val();
 	
 	var tagClass = '';
+    
+    //Add Code to allow multiple tag cloud in a page
+    var tagCloud = '';
 
 	// Setup our class based on what type of container we have everything inside 
 	if (id == '#tag') { tagClass = 'tag-cloud'; }
@@ -75,12 +81,18 @@ function addTag(id) {
 	// If there is no value in the input field then don't do anything
 	if (Tag != '') {
 
-		// Append tag with proper styling into the tag cloud 
-		$('<li class="'+tagClass+'">'+Tag+'</li>').appendTo("#tag-cloud");
+		//Check the cloud name
+        tagCloud = $(id).attr("data-cloud-name");
+        //Default to tag-cloud, if none provided
+        if (typeof tagCloud === "undefined") {
+            tagCloud = 'tag-cloud';
+        }
+        // Append tag with proper styling into the tag cloud 
+		$('<li class="' + tagClass + '">' + Tag + '</li>').appendTo("#" + tagCloud);
 
 		// Clear input back to nothing
-		$(id + ' > input').val('');		
+		$(id + ' > input').val('');
 
-	}	
+	}
 
 }
