@@ -12,11 +12,11 @@ Example
 <p>Add and remove tags. Add an <code>id</code> of <code>id="tag"</code>, <code>id="tag-info"</code>, <code>id="tag-success"</code>, <code>id="tag-warning"</code>, <code>id="tag-danger"</code>, or <code>id="tag-inverse"</code> to the surrounding <code>&lt;div&gt;</code> of the <code>&lt;input&gt;</code> and <code>&lt;button&gt;</code> for bootstrap tag cloud styles.</p>
 
 ```HTML
-<div id="tag-info" class="input-append">
+<div id="tag-info" class="input-append" data-cloud-name="tag-cloud2">
   <input type="text">
   <button class="btn" type="button">Add <i class="icon-plus"></i></button>
 </div>
-<ul id="tag-cloud"></ul>
+<ul id="tag-cloud2"></ul>
 ```
 Include bootstrap-tag-cloud.css in the &lt;head&gt;
 
