@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
     <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
     <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap-tag-cloud.css" >
 
     <script type="text/javascript" src="javascripts/modernizr.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascripts/bootstrap-tag-cloud.js"></script>
+ 
     <script type="text/javascript">
       $(document).ready(function () {
         $('#main_content').headsmart()
@@ -54,7 +60,56 @@
 <h2>
 <a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
 
-<p><img src="https://dl.dropboxusercontent.com/u/15923556/img/bootstrap-tag-cloud.jpg" alt=""></p>
+<div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Tag Success Cloud</div>
+                    <div class="panel-body">
+                        <center>
+                            <div id="tag-success" class="input-append" data-cloud-name="tag-cloud1">
+                                <input type="text" class="span2">
+                                <button class="btn btn-success btn-sm" type="button">Add<b>+</b></button>
+                            </div>
+                        </center>
+                        <br/>
+                        <div class="well well-sm">
+                            <ul id="tag-cloud1">
+                                <li class="tag-cloud tag-cloud-info">info1</li>
+                                <li class="tag-cloud tag-cloud-success">info2</li>
+                                <li class="tag-cloud tag-cloud-warning">info3</li>
+                                <li class="tag-cloud tag-cloud-danger">info4</li>
+                                <li class="tag-cloud tag-cloud-inverse">info5</li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Tag Warning Cloud</div>
+                    <div class="panel-body">
+                        <center>
+                            <div id="tag-warning" class="input-append" data-cloud-name="tag-cloud2">
+                                <input type="text" class="span2">
+                                <button class="btn btn-warning btn-sm" type="button">Add+</button>
+                            </div>
+                        </center>
+                        <br/>
+                        <div class="well well-sm">
+                            <ul id="tag-cloud2">
+                                <li class="tag-cloud tag-cloud-info">info1</li>
+                                <li class="tag-cloud tag-cloud-success">info2</li>
+                                <li class="tag-cloud tag-cloud-warning">info3</li>
+                                <li class="tag-cloud tag-cloud-danger">info4</li>
+                                <li class="tag-cloud tag-cloud-inverse">info5</li>
+                            </ul>
+                        </div>    
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
 
 <p>Add and remove tags. Add an <code>id</code> of <code>id="tag"</code>, <code>id="tag-info"</code>, <code>id="tag-success"</code>, <code>id="tag-warning"</code>, <code>id="tag-danger"</code>, or <code>id="tag-inverse"</code> to the surrounding <code>&lt;div&gt;</code> of the <code>&lt;input&gt;</code> and <code>&lt;button&gt;</code> for bootstrap tag cloud styles.</p>
 
