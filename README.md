@@ -5,6 +5,7 @@ A simple Twitter Bootstrap style tag cloud generator. Initial version was writte
 
 Example
 -------
+![](example.html)
 
 ![] (https://dl.dropboxusercontent.com/u/15923556/img/bootstrap-tag-cloud.jpg)
 
