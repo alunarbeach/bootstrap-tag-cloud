@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Example of tag cloud</title>
+	<!-- STYLES: BOOTSTRAPS -->
+    <link type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+	<!-- STYLES: THEMES -->
+    <link type="text/css" href="css/bootstrap-tag-cloud.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Tag Success Cloud</div>
+                    <div class="panel-body">
+                        <center>
+                            <div id="tag-success" class="input-append" data-cloud-name="tag-cloud1">
+                                <input type="text" class="span2">
+                                <button class="btn btn-success btn-sm" type="button">Add<b>+</b></button>
+                            </div>
+                        </center>
+                        <br/>
+                        <div class="well well-sm">
+                            <ul id="tag-cloud1">
+                                <li class="tag-cloud tag-cloud-info">info1</li>
+                                <li class="tag-cloud tag-cloud-success">info2</li>
+                                <li class="tag-cloud tag-cloud-warning">info3</li>
+                                <li class="tag-cloud tag-cloud-danger">info4</li>
+                                <li class="tag-cloud tag-cloud-inverse">info5</li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Tag Warning Cloud</div>
+                    <div class="panel-body">
+                        <center>
+                            <div id="tag-warning" class="input-append" data-cloud-name="tag-cloud2">
+                                <input type="text" class="span2">
+                                <button class="btn btn-warning btn-sm" type="button">Add+</button>
+                            </div>
+                        </center>
+                        <br/>
+                        <div class="well well-sm">
+                            <ul id="tag-cloud2">
+                                <li class="tag-cloud tag-cloud-info">info1</li>
+                                <li class="tag-cloud tag-cloud-success">info2</li>
+                                <li class="tag-cloud tag-cloud-warning">info3</li>
+                                <li class="tag-cloud tag-cloud-danger">info4</li>
+                                <li class="tag-cloud tag-cloud-inverse">info5</li>
+                            </ul>
+                        </div>    
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<!--<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!--SCRIPTS: TAG CLOUD -->
+	<script src="js/bootstrap-tag-cloud.js"></script>
+</body>
